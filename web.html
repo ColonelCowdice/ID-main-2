@@ -50,21 +50,24 @@
 
         /* Image container adjustments */
         .image-container {
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
             position: relative;
-            width: fit-content;
-            margin: auto;
+            width: 100%;
+            margin: 0 auto;
             overflow: hidden;
         }
 
         /* Pulsating bar and effect */
         .pulsating-bar {
             background-color: #e85c29;
-            height: 20px;
-            width: 81.5%;
-            margin-left: 41px;
+            height: 6%;
+            width: 80.2%; /* Match image width */
+            margin: 0 auto;
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 41;
             z-index: 1;
             box-shadow: -5px 8px 16px 2px rgba(0, 0, 0, 0.25), 5px 8px 16px 2px rgba(0, 0, 0, 0.25);
             overflow: hidden;
@@ -120,7 +123,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            height: 60px;
+            height: 62px;
             background-image: url('image (1).png');
             background-size: cover;
             background-position: center;
@@ -128,18 +131,10 @@
         }
 
         /* Center image styling */
-        .center-image {
-            max-width: 110%;
-            max-height: 110%;
-            margin-left: 23px;
-        }
-
-        .center-head {
-            max-width: 120.5%;
-            max-height: 120.5%;
-            margin-left: -42.5px;
-            position: relative;
-            z-index: 2; /* Higher than pulsating bar */
+        .center-head, .center-image {
+            max-width: 90%; /* Responsive width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0px 0; /* Space between images */
         }
 
         /* Clock styling */
@@ -203,7 +198,7 @@
             <img src="Picture1_enhanced.png" alt="Centered Image" class="center-head"> <!-- Centered Image -->
             <div class="pulsating-bar"></div> <!-- Pulsating bar -->
         </div>
-        <img src="ACCREAL_enhanced.png" alt="Centered Image" class="center-image"> <!-- Centered Image -->
+        <img src="Good Copy.png" alt="Centered Image" class="center-image"> <!-- Centered Image -->
     </div>
 
     <!-- Bottom bar fixed at the bottom -->
